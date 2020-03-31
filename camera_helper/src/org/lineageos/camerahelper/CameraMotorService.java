@@ -18,9 +18,11 @@ package org.lineageos.camerahelper;
 
 import android.annotation.NonNull;
 import android.app.Service;
+import android.content.Context;
 import android.content.Intent;
 import android.hardware.camera2.CameraManager;
 import android.media.AudioAttributes;
+import android.media.AudioManager;
 import android.media.SoundPool;
 import android.os.Handler;
 import android.os.IBinder;
@@ -140,13 +142,17 @@ public class CameraMotorService extends Service implements Handler.Callback {
     }
 
     private void playSoundEffect(int state) {
+        AudioManager audioManager =
+                (AudioManager) getApplicationContext().getSystemService(Context.AUDIO_SERVICE);
+        if (audioManager.getRingerMode() != AudioManager.RINGER_MODE_NORMAL) {
+            return;
+        }
         int soundEffect = Integer.parseInt(mPopupCameraPreferences.getSoundEffect());
         if (soundEffect != -1) {
             if (state == MSG_CAMERA_CLOSED) {
                 soundEffect++;
             }
-            mSoundPool.play(mSounds[soundEffect], 1.0f, 1.0f, 0,
-                    0, 1.0f);
+            mSoundPool.play(mSounds[soundEffect], 1.0f, 1.0f, 0, 0, 1.0f);
         }
     }
 }
