@@ -152,7 +152,8 @@ DOLBY_ENABLE := true
 PRODUCT_VENDOR_PROPERTIES += \
     ro.vendor.dolby.dax.version=DAX3_3.6.0.12_r1 \
     persist.vendor.audio_fx.current=dolby \
-    ro.audio.monitorRotation=true
+    ro.audio.monitorRotation=true \
+    ro.vendor.audio.dolby.dax.support=true
 
 # DPM
 PRODUCT_VENDOR_PROPERTIES += \
