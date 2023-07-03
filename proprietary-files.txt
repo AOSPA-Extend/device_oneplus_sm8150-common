@@ -3,6 +3,7 @@
 # ADSP
 vendor/bin/adsprpcd
 vendor/etc/init/vendor.qti.adsprpc-service.rc
+vendor/lib/libadsp_default_listener.so
 vendor/lib64/libadsp_default_listener.so
 
 # ADSP modules
@@ -37,6 +38,10 @@ vendor/lib64/hw/com.dsi.ant@1.0-impl.so|87dc1a131534659173e71e108e7a3ffe6325845f
 vendor/firmware/tfa98xx.cnt
 
 # Audio libraries
+system_ext/lib/libvr_sam_wrapper.so
+system_ext/lib/libvraudio.so
+system_ext/lib64/libvraudio.so
+system_ext/lib64/libvr_sam_wrapper.so
 vendor/lib/soundfx/libasphere.so
 vendor/lib/soundfx/libhaptic_effect.so
 vendor/lib/soundfx/libqcbassboost.so
