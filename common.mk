@@ -147,6 +147,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/dolby/dax-default.xml:$(TARGET_COPY_OUT_VENDOR)/etc/dolby/dax-default.xml
 
 TARGET_EXCLUDES_AUDIOFX := true
+DOLBY_ENABLE := true
 
 PRODUCT_VENDOR_PROPERTIES += \
     ro.vendor.dolby.dax.version=DAX3_3.6.0.12_r1 \
