@@ -1,0 +1,5 @@
+#============= vendor_location_lowi_server ==============
+allow vendor_location_lowi_server vendor_location:unix_stream_socket { read write };
+
+#============= vendor_location_xtra_daemon ==============
+allow vendor_location_xtra_daemon vendor_location:unix_stream_socket { read write };

@@ -1,1 +1,2 @@
 r_dir_file(ueventd, metadata_file);
+allow ueventd metadata_file:dir search;

@@ -1,1 +1,2 @@
 r_dir_file(fsck_untrusted, sysfs_dm)
+allow fsck sysfs_dm:dir search;
