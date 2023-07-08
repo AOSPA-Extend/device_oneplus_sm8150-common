@@ -167,8 +167,6 @@ vendor/lib64/libsysmon_cdsp_skel.so
 
 # Charger
 vendor/bin/dashd
-vendor/bin/hvdcp_opti
-vendor/etc/init/vendor.qti.hardware.charger_monitor@1.0-service.rc
 
 # Certificate Authority - from LA.UM.9.1.r1-12900-SMxxx0.0
 -vendor/app/CACertService/CACertService.apk|b1072f129d588b5c5aefa8824b6d531586a26755
