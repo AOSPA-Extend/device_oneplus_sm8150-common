@@ -285,6 +285,7 @@ TARGET_COMMON_QTI_COMPONENTS := \
     bt \
     charging \
     display \
+    keymaster \
     media \
     overlay \
     perf \
