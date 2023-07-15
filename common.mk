@@ -293,6 +293,10 @@ TARGET_COMMON_QTI_COMPONENTS := \
     usb \
     wfd
 
+# RCS
+PRODUCT_VENDOR_PROPERTIES += \
+    persist.rcs.supported=1
+
 # Sensors
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.sensor.accelerometer.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.accelerometer.xml \
