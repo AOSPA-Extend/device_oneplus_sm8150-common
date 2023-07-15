@@ -1,6 +1,10 @@
 android_app {
     name: "OnePlusCameraHelper",
 
+    defaults: [
+        "SettingsLibDefaults",
+    ],
+
     srcs: ["src/**/*.java"],
 
     certificate: "platform",
@@ -8,6 +12,11 @@ android_app {
     privileged: true,
 
     resource_dirs: ["res"],
+
+    static_libs: [
+        "androidx.core_core",
+        "androidx.preference_preference",
+    ],
 
     optimize: {
         proguard_flags_files: ["proguard.flags"],

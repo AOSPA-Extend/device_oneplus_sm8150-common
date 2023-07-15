@@ -21,3 +21,14 @@ allow camera_helper_app mnt_vendor_file:dir search;
 
 # Allow camera_helper_app to read persist_engineer_file
 r_dir_file(camera_helper_app, persist_engineer_file)
+
+allow camera_helper_app {
+  audio_service
+  audioserver_service
+  cameraserver_service
+  media_session_service
+  mediaextractor_service
+  mediametrics_service
+  mediaserver_service
+  surfaceflinger_service
+}:service_manager find;

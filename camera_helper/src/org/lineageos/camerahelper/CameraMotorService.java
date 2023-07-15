@@ -20,6 +20,8 @@ import android.annotation.NonNull;
 import android.app.Service;
 import android.content.Intent;
 import android.hardware.camera2.CameraManager;
+import android.media.AudioAttributes;
+import android.media.SoundPool;
 import android.os.Handler;
 import android.os.IBinder;
 import android.os.Message;
@@ -29,6 +31,7 @@ import android.util.Log;
 public class CameraMotorService extends Service implements Handler.Callback {
     private static final boolean DEBUG = true;
     private static final String TAG = "CameraMotorService";
+    public static final String POPUP_SOUND_PATH = "/system/media/audio/ui/";
 
     public static final int CAMERA_EVENT_DELAY_TIME = 100; // ms
 
@@ -39,8 +42,13 @@ public class CameraMotorService extends Service implements Handler.Callback {
 
     private Handler mHandler = new Handler(this);
 
+    private int[] mSounds;
     private long mClosedEvent;
     private long mOpenEvent;
+
+    private PopupCameraPreferences mPopupCameraPreferences;
+
+    private SoundPool mSoundPool;
 
     private CameraManager.AvailabilityCallback mAvailabilityCallback =
             new CameraManager.AvailabilityCallback() {
@@ -81,6 +89,20 @@ public class CameraMotorService extends Service implements Handler.Callback {
 
         CameraManager cameraManager = getSystemService(CameraManager.class);
         cameraManager.registerAvailabilityCallback(mAvailabilityCallback, null);
+
+        mPopupCameraPreferences = new PopupCameraPreferences(this);
+        mSoundPool = new SoundPool.Builder().setMaxStreams(1)
+                .setAudioAttributes(new AudioAttributes.Builder()
+                        .setUsage(AudioAttributes.USAGE_ASSISTANCE_SONIFICATION)
+                        .setContentType(AudioAttributes.CONTENT_TYPE_SONIFICATION)
+                        .setFlags(AudioAttributes.FLAG_AUDIBILITY_ENFORCED)
+                        .build()).build();
+        String[] soundNames = getResources().getStringArray(R.array.popupcamera_effects_names);
+        mSounds = new int[soundNames.length];
+        for (int i = 0; i < soundNames.length; i++) {
+            mSounds[i] = mSoundPool.load(POPUP_SOUND_PATH + soundNames[i], 1);
+        }
+
     }
 
     @Override
@@ -106,12 +128,25 @@ public class CameraMotorService extends Service implements Handler.Callback {
             case MSG_CAMERA_CLOSED:
                 CameraMotorController.setMotorDirection(CameraMotorController.DIRECTION_DOWN);
                 CameraMotorController.setMotorEnabled();
+                playSoundEffect(MSG_CAMERA_CLOSED);
                 break;
             case MSG_CAMERA_OPEN:
                 CameraMotorController.setMotorDirection(CameraMotorController.DIRECTION_UP);
                 CameraMotorController.setMotorEnabled();
+                playSoundEffect(MSG_CAMERA_OPEN);
                 break;
         }
         return true;
+    }
+
+    private void playSoundEffect(int state) {
+        int soundEffect = Integer.parseInt(mPopupCameraPreferences.getSoundEffect());
+        if (soundEffect != -1) {
+            if (state == MSG_CAMERA_CLOSED) {
+                soundEffect++;
+            }
+            mSoundPool.play(mSounds[soundEffect], 1.0f, 1.0f, 0,
+                    0, 1.0f);
+        }
     }
 }
