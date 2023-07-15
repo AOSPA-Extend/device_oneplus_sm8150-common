@@ -96,11 +96,15 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.camera.device@1.0.vendor:64
 
 PRODUCT_VENDOR_PROPERTIES += \
-    ro.vendor.camera.res.fmq.size=1048576
+    ro.vendor.camera.res.fmq.size=1048576 \
+    persist.camera.is_mode=4 \
+    persist.vendor.camera.oissr.debug=1 \
+    vendor.debug.camera.eisv2enable=1 \
+    vendor.debug.camera.eisv3enable=1
 
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
-    persist.vendor.camera.privapp.list=com.oneplus.camera \
-    vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.oneplus.camera
+    persist.vendor.camera.privapp.list=com.oneplus.camera, com.google.android.GoogleCamera \
+    vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.oneplus.camera,com.google.android.GoogleCamera
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.flash-autofocus.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.flash-autofocus.xml \
