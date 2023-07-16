@@ -3,6 +3,4 @@ allow system_server { proc_sensor proc_ultrasound proc_touchpanel }:dir search;
 # allow system server to read fast charge node
 allow system_server vendor_sysfs_battery_supply:file { getattr open read };
 
-dontaudit system_server sysfs:file read;
-
 allow system_server vendor_camera_prop:file { read open getattr map };
