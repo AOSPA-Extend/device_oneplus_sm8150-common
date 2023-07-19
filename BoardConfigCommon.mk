@@ -95,7 +95,8 @@ BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 BOARD_RAMDISK_USE_LZ4 := true
 KERNEL_DEFCONFIG := vendor/sm8150-perf_defconfig
 KERNEL_CUSTOM_LLVM := true
-
+KERNEL_CUSTOM_LLVM_PATH := $(shell pwd)/prebuilts/clang/host/linux-x86/clang-r498229
+    
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
 
