@@ -80,6 +80,10 @@ PRODUCT_VENDOR_PROPERTIES += \
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
     persist.vendor.bt.a2dp.hal.implementation=true
 
+PRODUCT_SYSTEM_PROPERTIES += \
+    persist.vendor.btstack.enable.lpa=true \
+    persist.vendor.btstack.enable.twsplus=true
+    
 # Boot control
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.2-impl-qti:64 \
@@ -274,6 +278,21 @@ PRODUCT_PACKAGES += \
     OnePlusSM8150Settings \
     OnePlusSM8150SystemUI
 
+# Power
+PRODUCT_PACKAGES += \
+    android.hardware.power-service-qti \
+    android.hardware.power@1.2.vendor \
+    vendor.qti.hardware.perf@2.2.vendor
+
+PRODUCT_VENDOR_PROPERTIES += \
+    ro.vendor.extension_library=libqti-perfd-client.so \
+    ro.vendor.scroll.preobtain.enable=false \
+    vendor.pasr.activemode.enabled=true \
+    vendor.power.pasr.enabled=false \
+
+PRODUCT_SYSTEM_PROPERTIES += \
+    ro.vendor.qti.sys.fw.bg_apps_limit=60
+
 # Platform
 TARGET_BOARD_PLATFORM := msmnile
 
@@ -289,7 +308,6 @@ TARGET_COMMON_QTI_COMPONENTS := \
     keymaster \
     media \
     overlay \
-    perf \
     telephony \
     usb \
     wfd
@@ -320,6 +338,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
     persist.vendor.naruto.light.support=true \
     persist.vendor.sensors.enable.mag_filter=true
+
+# Servicetracker
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.servicetracker@1.2.vendor
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
