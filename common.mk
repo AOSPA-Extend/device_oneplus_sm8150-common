@@ -305,7 +305,6 @@ TARGET_COMMON_QTI_COMPONENTS := \
     bt \
     charging \
     display \
-    keymaster \
     media \
     overlay \
     telephony \
@@ -341,7 +340,7 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
 
 # Servicetracker
 PRODUCT_PACKAGES += \
-    vendor.qti.hardware.servicetracker@1.2.vendor
+    vendor.qti.hardware.servicetracker@1.2.vendor \
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
