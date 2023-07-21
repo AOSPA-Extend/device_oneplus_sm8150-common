@@ -64,6 +64,10 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.btconfigstore@1.0.vendor:64 \
     vendor.qti.hardware.btconfigstore@2.0.vendor:64
 
+PRODUCT_SYSTEM_PROPERTIES += \
+    persist.vendor.btstack.enable.lpa=true \
+    persist.vendor.btstack.enable.twsplus=true
+
 PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.oneplus.bt.asd.chain=0 \
     persist.vendor.oneplus.bt.asd.firmware=false \
@@ -293,6 +297,14 @@ TARGET_COMMON_QTI_COMPONENTS := \
     telephony \
     usb \
     wfd
+
+TARGET_MEDIA_COMPONENT_VARIANT := media
+TARGET_PERF_COMPONENT_VARIANT := perf
+    
+# Radio
+
+PRODUCT_VENDOR_PROPERTIES += \
+    persist.vendor.radio.add_power_save=1
 
 # RCS
 PRODUCT_VENDOR_PROPERTIES += \
