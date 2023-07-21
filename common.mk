@@ -141,10 +141,6 @@ PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.color.matrix=2 \
     vendor.display.disable_mask_layer_hint=1
 
-# Display Mode
-PRODUCT_PACKAGES += \
-    DisplayMode
-
 # Dolby
 $(call inherit-product, vendor/oneplus/dolby/dolby-vendor.mk)
 
