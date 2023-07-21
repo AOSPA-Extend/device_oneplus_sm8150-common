@@ -297,12 +297,8 @@ TARGET_COMMON_QTI_COMPONENTS := \
     telephony \
     usb \
     wfd
-
-TARGET_MEDIA_COMPONENT_VARIANT := media
-TARGET_PERF_COMPONENT_VARIANT := perf
     
 # Radio
-
 PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.radio.add_power_save=1
 

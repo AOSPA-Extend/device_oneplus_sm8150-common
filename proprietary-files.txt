@@ -90,6 +90,8 @@ vendor/bin/vl53l1_daemon_main
 vendor/etc/init/vendor.oneplus.hardware.CameraMDMHIDL@1.0-service.rc
 vendor/etc/init/vendor.oneplus.hardware.camera@1.0-service.rc
 vendor/etc/init/vl53l1.rc
+vendor/lib64/camera.device@3.2-impl.so
+vendor/lib64/camera.device@3.3-impl.so
 vendor/lib64/libSTDualCamCaptureWT.so
 vendor/lib64/libSonyIMX471RmscLibrary.so
 vendor/lib64/libSuperSensor.so
@@ -141,10 +143,6 @@ vendor/lib64/libvidhance.so
 vendor/lib64/libvl53l1_daemon.so
 vendor/lib64/sensors.hal.tof.so
 vendor/lib64/vendor.oneplus.hardware.CameraMDMHIDL@1.0.so
-
-# Generated camera libraries (commit message)
-vendor/lib64/camera.device@3.2-impl.so|6a3138bfb9a963cbae58efc8d24f774be810ae1c
-vendor/lib64/camera.device@3.3-impl.so|d8715b6f16a31edb4feb9c74065d9b2e6ccf9ab9
 
 # Camera firmware
 vendor/firmware/CAMERA_ICP.elf
@@ -531,22 +529,13 @@ vendor/bin/mdm_helper|e6b2ee0b4a3b5f93f99b3ac35bd1fc885b90a8bd
 vendor/lib64/libmdmimgload.so|c58679d001bae43db9173b0077fe0a71d1130d19
 
 # Media - from LA.UM.9.1.r1-12900-SMxxx0.0
-system_ext/lib/libmmosal.so|362862b4ffcd163db3a7145103211a2f2c72a207
-system_ext/lib/libmmparser_lite.so|5e7aa4d5a5aa9d10a4d07cfcf6903f99ffe0c4bd
-system_ext/lib/libmmrtpdecoder.so|0b41da1c84e4a5abc01b4dba18a121f73ad0c409
-system_ext/lib/libmmrtpencoder.so|a14a07eefd96889a7287640341d9fff0a7a4bb11
-system_ext/lib64/libmmosal.so|15eacef12a8d262f49b65f984736570257c152f5
-system_ext/lib64/libmmparser_lite.so|20302a671e2ea809a78d60b3d0763f004dfe3a89
-system_ext/lib64/libmmrtpdecoder.so|b357af14455971d9f126a109d0214b63661dba40
-system_ext/lib64/libmmrtpencoder.so|31bdf1aeb6f5c183fc9fb2e63acc3a42f79759fb
+vendor/bin/vppservice|99524e6e27bf4f8c4b5c5234f887413623cfdb0f
 vendor/etc/configstore/vpp.configstore.xml|ed961545186c66fd9523f25866c74f2e11ee63d7
 vendor/etc/init/vppservice.rc|24c089e0e413cbb3fa6daaf0af4215870bdf1b8e
 vendor/lib/libAlacSwDec.so|cb41b0945e57b349e6aa476cdac4315ee13a2def
 vendor/lib/libApeSwDec.so|ce425ef9372ed6635e313422b3578f77b90ff526
-vendor/lib/libFileMux_proprietary.so|1e125137fcc2c1843cc14e3ec34fc1068fc6bc14
 vendor/lib/libFlacSwDec.so|6b17d0965c9f8bddab3ffd59e7bb16e92bb68d85
 vendor/lib/libI420colorconvert.so|09a63a93d9cf2f78e31cb996a617071572e4f3db
--vendor/lib/libMpeg4SwEncoder.so|ed6478056d874c784dd649b172e7f0bb3188ba9f
 vendor/lib/libOmxAacDec.so|ce4efb1349b5989eb74bd54f82e8f74974df814b
 vendor/lib/libOmxAlacDec.so|342573d77212cf263c5f9df7a6af48f4f8803197
 vendor/lib/libOmxAlacDecSw.so|be917abb87f621c8d721a03ed42016ae12bdbf8a
@@ -556,31 +545,26 @@ vendor/lib/libOmxApeDec.so|da7197cc21e9a0bda53f237499fd5c6806461337
 vendor/lib/libOmxApeDecSw.so|a0980f890bfa7a04c4af2e3d40e176e7d7bbf693
 vendor/lib/libOmxDsdDec.so|93832f5a8e016a0cd419fca916f29a7987d4af9e
 vendor/lib/libOmxEvrcDec.so|e26f066a89944ee36450c5325b45e5529de60882
-vendor/lib/libOmxG711Dec.so|2c3a8f5c52c4c76c7e47d78995b9022a28e01242
 vendor/lib/libOmxQcelp13Dec.so|ec0650fee64998b47cfed806cda26f0eb8fd85a8
-vendor/lib/libOmxSwVdec.so|9fb60f449e31eb150739af03badc8c1ff5a8ae66
-vendor/lib/libOmxSwVencMpeg4.so|8a8901ac17a6b9cb55104ae7343eae1c41e19323
+vendor/lib/libOmxVideoDSMode.so|22dfbf532097386c411ab479aa177ed0b098b0cb
 vendor/lib/libOmxVpp.so|010378466ccb164d9aee0ea47e19fd0ab43917a8
 vendor/lib/libOmxWmaDec.so|17f0f77fb9a27a8381c8dbc77d6aac5c303ac453
 vendor/lib/libdsd2pcm.so|c5ab1afd7a5a23bf83d80b5ac74247c3dd2085af
 vendor/lib/libmm-color-convertor.so|904f9daeca6323b7d240c2f640a92852bac88146
 vendor/lib/libmmosal.so|04a064cd6867ebba2c623a84606f76dbeea9d58e
-vendor/lib/libmmrtpdecoder_proprietary.so|227a26b9ec9ee6f2dc95de47b713b215e8b6c93e
-vendor/lib/libmmrtpencoder_proprietary.so|d0aec32b8e565912ecc475bad40ed626ac1ee04d
-vendor/lib/libstagefright_soft_qtiflacdec.so|aa9a59c8ab8099012625d806f962aba24aa4a7f6
-vendor/lib/libswvdec.so|443380c7092d69f47ff204549a7670a1573cd922
+vendor/lib/libqc2vppfilter.so|f16a74b7a33275f213eded5ab027dc3b973e7a60
 vendor/lib/libvppclient.so|4b782018a25d6183be12d725d8954b14e5def212
 vendor/lib/libvpphvx.so|32f90b9809ea221f0856f0a3563511cf54d7e9f8
+vendor/lib/libvppimmotion.so|d3be671eb77d539cd6668df9b6ac4f1ed23a7232
 vendor/lib/libvpplibrary.so|9ce20dea58b8ef90c0c23b58d1064ec3b90df24c
-vendor/lib/libvpptestutils.so|da0d6de5cc7ae83d2e367b2263a00e42e4edd73d
-vendor/lib/vendor.qti.hardware.vpp@1.1.so|3e0467d0c30bb6cccab12d2e67dacc5ea852b3df
-vendor/lib/vendor.qti.hardware.vpp@1.2.so|d1226cfbeee864b7cac52bcee37fdf4524892fd6
-vendor/lib/vendor.qti.hardware.vpp@1.3.so|6ff4979c9632ce9f244aeba7a0804332328f3fa9
+vendor/lib/qti.video.utils.videobufferlayout.so|55a754cb2ddc01407a17eafd0ae5c557f4946aac
+vendor/lib/vendor.qti.hardware.capabilityconfigstore@1.0.so
+vendor/lib/vendor.qti.hardware.qconfig@1.0.so|fe680b59a4f9090eea604a9f8ce95b5054f08cba
+vendor/lib/vendor.qti.hardware.vpp@2.0.so|62c10cc109c776908c0043435fb0b44c5d3a9818
 vendor/lib64/libAlacSwDec.so|e520eafd5dd9ee29456b60f4668ea94394a61a63
 vendor/lib64/libApeSwDec.so|76d3cc02ca1c3cdc3c71e57dc6e53027d2bf3d37
 vendor/lib64/libFlacSwDec.so|c16096dee817ba98a5a7b79ae358ae0db27fe237
 vendor/lib64/libI420colorconvert.so|ea24367de946f2c2a7f81b78c0a805edf8fd2d64
--vendor/lib64/libMpeg4SwEncoder.so|17a2e12c6bb2184a73c54174f1ec14a2ccff4b11
 vendor/lib64/libOmxAacDec.so|b3e96ef3536a5cf33a1e1ddf59016b61fa534662
 vendor/lib64/libOmxAlacDec.so|2ecd59d8a95202df0a9d208d32424f8a980759e4
 vendor/lib64/libOmxAlacDecSw.so|b4170d63362517866eaac0e8ac286f60aeac9257
@@ -596,15 +580,16 @@ vendor/lib64/libOmxSwVencMpeg4.so|eae0409d257783ab950b8f34cfc4fbd1a27d5e85
 vendor/lib64/libOmxVpp.so|e10d0e04a35e7d517fb6554b3a3a8d777404052a
 vendor/lib64/libOmxWmaDec.so|4637755c35a8c003ac2eda40d39e4d426a320dca
 vendor/lib64/libmm-color-convertor.so|ade617dc02ec472e68755568d6295ab328aa97be
-vendor/lib64/libstagefright_soft_qtiflacdec.so|136d3bf28ab3b38bfb38a07cfaff08e728a886ec
-vendor/lib64/libswvdec.so|439db421835705020c8c9ad02e5385922d917747
+vendor/lib64/libmmosal.so|a90209ff9e2005c04dcc8e75703fef8866639d3e
+vendor/lib64/libqc2vppfilter.so|62086788eb4ea42ae852d8bee1d045e5c2fbd3ff
 vendor/lib64/libvppclient.so|e63252fe6692c05bb4192cdf2054fc252f9d2f9f
 vendor/lib64/libvpphvx.so|449c9d5448081aed1191c0478cd1e236eabf2a26
+vendor/lib64/libvppimmotion.so|b3df461f2e142868d6254fc244affecbbd8d9912
 vendor/lib64/libvpplibrary.so|71152f530320f55862c1f4afc1957597f4c8e9f0
-vendor/lib64/libvpptestutils.so|5e2b2b2b4c9e52effb6931496e83ba019de50a56
-vendor/lib64/vendor.qti.hardware.vpp@1.1.so|e336f4a3d0a50ee985639db6a8a70ec9817144ee
-vendor/lib64/vendor.qti.hardware.vpp@1.2.so|7ae61a9c75d4a17f0aad5969ce1a27cd5b0552ae
-vendor/lib64/vendor.qti.hardware.vpp@1.3.so|85a4e2ca843525db5c76486dbee4c5c7a672ee8d
+vendor/lib64/qti.video.utils.videobufferlayout.so|f6d56633bd716586bde4faea5d48edb9a59cd7a1
+vendor/lib64/vendor.qti.hardware.capabilityconfigstore@1.0.so
+vendor/lib64/vendor.qti.hardware.qconfig@1.0.so|3da416b63746530d843cc1b6ed0bc2158c07c5a2
+vendor/lib64/vendor.qti.hardware.vpp@2.0.so|51c27352bd1af74318f5dc9e580635eef464d7fb
 
 # Neural Networks - from LA.UM.9.1.r1-11500.02-SMxxx0.QSSI12.0
 vendor/lib64/unnhal-acc-hta.so|f38899dbcc7582d267703f1967e77485e82bf66b
@@ -696,6 +681,14 @@ vendor/lib64/hw/vendor.qti.hardware.qccvndhal@1.0-impl.so|0b1e323871e2828b9e8970
 vendor/lib64/vendor.qti.hardware.qccsyshal@1.0.so|3ff445db2dd2db1a1068fe70a54a6c04fbdd3123
 vendor/lib64/vendor.qti.hardware.qccvndhal@1.0-halimpl.so|58dd8c5877ba3a274f43f63e6f033213dd84e1c4
 vendor/lib64/vendor.qti.hardware.qccvndhal@1.0.so|01b1d11316f5dcd8c1012a55ff01399081c79940
+
+# QCV (SOC Helper) - from LA.UM.9.1.r1-12900-SMxxx0.0
+vendor/bin/init.qti.qcv.sh|355a70cde39583a7f2a07441ba5ab1ed4d7feb18
+vendor/etc/init/init.qti.qcv.rc|1d0cff5660bdf7abc22ac2b960a0dcd88404d740
+vendor/lib/libsoc_helper.so|8d4a7717f3fc559de9ef0f87180b7f0a7cec6490
+vendor/lib/libsoc_helper_jni.so|13d692294bea3fb90e46629edbfd7c31c37d293d
+vendor/lib64/libsoc_helper.so|a7de8fae284f55adf21ca161155b41d6df9dae56
+vendor/lib64/libsoc_helper_jni.so|eb36a57f372b0b7bcb81ecfef1219905ccf3cf39
 
 # QMI - from LA.UM.9.1.r1-12900-SMxxx0.0
 vendor/bin/irsc_util|121deb2d6fd21b122c6a8ca8b30ef167f6b90f61
