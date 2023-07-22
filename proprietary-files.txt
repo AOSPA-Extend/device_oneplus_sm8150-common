@@ -497,6 +497,13 @@ vendor/lib64/vendor.qti.ims.rcsconfig@2.1.so|f52f0cd5e19455eba97dea61542217d4aa5
 vendor/lib64/vendor.qti.imsrtpservice@3.0-service-Impl.so|4fc84ea2ec56396fa1d6daa9c8f06b227be403a4
 vendor/lib64/vendor.qti.imsrtpservice@3.0.so|460e589128fce0b0e83bb3c75aa32f7e1a9494fd
 
+# IO prefetcher
+vendor/bin/hw/vendor.qti.hardware.iop@2.0-service
+vendor/etc/init/vendor.qti.hardware.iop@2.0-service.rc
+vendor/lib64/libqti-iopd-client.so
+vendor/lib64/libqti-iopd.so
+vendor/lib64/vendor.qti.hardware.iop@1.0.so
+vendor/lib64/vendor.qti.hardware.iop@2.0.so
 
 # IPA firmware
 vendor/firmware/ipa_fws.b00
@@ -511,6 +518,9 @@ vendor/firmware/ipa_uc.b01
 vendor/firmware/ipa_uc.b02
 vendor/firmware/ipa_uc.elf
 vendor/firmware/ipa_uc.mdt
+
+# IRQ balance
+vendor/bin/msm_irqbalance
 
 # Listen
 vendor/lib/hw/sound_trigger.primary.msmnile.so
@@ -652,6 +662,29 @@ vendor/etc/init/vendor.oneplus.hardware.param@1.0-service.rc
 vendor/lib/vendor.oneplus.hardware.param@1.0.so
 vendor/lib64/libparam_vendor.so
 vendor/lib64/vendor.oneplus.hardware.param@1.0.so
+
+# Perf
+vendor/bin/hw/vendor.qti.hardware.perf@2.2-service
+vendor/etc/init/vendor.qti.hardware.perf@2.2-service.rc
+vendor/etc/perf/commonresourceconfigs.xml
+vendor/etc/perf/perfboostsconfig.xml
+vendor/etc/perf/targetconfig.xml
+vendor/etc/perf/targetresourceconfigs.xml
+vendor/etc/powerhint.xml
+vendor/lib/libperfconfig.so
+vendor/lib/libperfgluelayer.so
+vendor/lib/libperfioctl.so
+vendor/lib/libqti-perfd-client.so
+vendor/lib/libqti-perfd.so
+vendor/lib/libqti-util.so
+vendor/lib64/liblearningmodule.so
+vendor/lib64/libmeters.so
+vendor/lib64/libperfconfig.so
+vendor/lib64/libperfgluelayer.so
+vendor/lib64/libperfioctl.so
+vendor/lib64/libqti-perfd-client.so
+vendor/lib64/libqti-perfd.so
+vendor/lib64/libqti-util.so
 
 # Peripheral manager - from LA.UM.9.1.r1-12900-SMxxx0.0
 vendor/bin/pm-proxy|c36785c811db9af0d6d938cdbc6b90dedaaf706e
