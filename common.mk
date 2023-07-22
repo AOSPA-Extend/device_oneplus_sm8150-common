@@ -83,7 +83,7 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
 PRODUCT_SYSTEM_PROPERTIES += \
     persist.vendor.btstack.enable.lpa=true \
     persist.vendor.btstack.enable.twsplus=true
-    
+
 # Boot control
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.2-impl-qti:64 \
@@ -297,6 +297,10 @@ TARGET_COMMON_QTI_COMPONENTS := \
     telephony \
     usb \
     wfd
+
+# Radio
+PRODUCT_VENDOR_PROPERTIES += \
+    persist.vendor.radio.add_power_save=1
 
 # RCS
 PRODUCT_VENDOR_PROPERTIES += \
