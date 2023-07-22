@@ -564,10 +564,15 @@ vendor/lib/libOmxWmaDec.so|17f0f77fb9a27a8381c8dbc77d6aac5c303ac453
 vendor/lib/libdsd2pcm.so|c5ab1afd7a5a23bf83d80b5ac74247c3dd2085af
 vendor/lib/libmm-color-convertor.so|904f9daeca6323b7d240c2f640a92852bac88146
 vendor/lib/libmmosal.so|04a064cd6867ebba2c623a84606f76dbeea9d58e
+vendor/lib/libqc2vppfilter.so|f16a74b7a33275f213eded5ab027dc3b973e7a60
 vendor/lib/libvppclient.so|4b782018a25d6183be12d725d8954b14e5def212
 vendor/lib/libvpphvx.so|32f90b9809ea221f0856f0a3563511cf54d7e9f8
 vendor/lib/libvppimmotion.so|d3be671eb77d539cd6668df9b6ac4f1ed23a7232
 vendor/lib/libvpplibrary.so|9ce20dea58b8ef90c0c23b58d1064ec3b90df24c
+vendor/lib/qti.video.utils.videobufferlayout.so|55a754cb2ddc01407a17eafd0ae5c557f4946aac
+vendor/lib/vendor.qti.hardware.capabilityconfigstore@1.0.so|a4173f7af5a0a4ea09f89cc06ecb9374dec1653d
+vendor/lib/vendor.qti.hardware.qconfig@1.0.so|fe680b59a4f9090eea604a9f8ce95b5054f08cba
+vendor/lib/vendor.qti.hardware.vpp@2.0.so|62c10cc109c776908c0043435fb0b44c5d3a9818
 vendor/lib64/libAlacSwDec.so|e520eafd5dd9ee29456b60f4668ea94394a61a63
 vendor/lib64/libApeSwDec.so|76d3cc02ca1c3cdc3c71e57dc6e53027d2bf3d37
 vendor/lib64/libFlacSwDec.so|c16096dee817ba98a5a7b79ae358ae0db27fe237
@@ -588,10 +593,15 @@ vendor/lib64/libOmxVpp.so|e10d0e04a35e7d517fb6554b3a3a8d777404052a
 vendor/lib64/libOmxWmaDec.so|4637755c35a8c003ac2eda40d39e4d426a320dca
 vendor/lib64/libmm-color-convertor.so|ade617dc02ec472e68755568d6295ab328aa97be
 vendor/lib64/libmmosal.so|a90209ff9e2005c04dcc8e75703fef8866639d3e
+vendor/lib64/libqc2vppfilter.so|62086788eb4ea42ae852d8bee1d045e5c2fbd3ff
 vendor/lib64/libvppclient.so|e63252fe6692c05bb4192cdf2054fc252f9d2f9f
 vendor/lib64/libvpphvx.so|449c9d5448081aed1191c0478cd1e236eabf2a26
 vendor/lib64/libvppimmotion.so|b3df461f2e142868d6254fc244affecbbd8d9912
 vendor/lib64/libvpplibrary.so|71152f530320f55862c1f4afc1957597f4c8e9f0
+vendor/lib64/qti.video.utils.videobufferlayout.so|f6d56633bd716586bde4faea5d48edb9a59cd7a1
+vendor/lib64/vendor.qti.hardware.capabilityconfigstore@1.0.so|e785c094f433550d9ec7cb1d004c021086cbc7bd
+vendor/lib64/vendor.qti.hardware.qconfig@1.0.so|3da416b63746530d843cc1b6ed0bc2158c07c5a2
+vendor/lib64/vendor.qti.hardware.vpp@2.0.so|51c27352bd1af74318f5dc9e580635eef464d7fb
 
 # Neural Networks - from LA.UM.9.1.r1-11500.02-SMxxx0.QSSI12.0
 vendor/lib64/unnhal-acc-hta.so|f38899dbcc7582d267703f1967e77485e82bf66b
