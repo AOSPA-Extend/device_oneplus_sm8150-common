@@ -80,6 +80,10 @@ PRODUCT_VENDOR_PROPERTIES += \
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
     persist.vendor.bt.a2dp.hal.implementation=true
 
+PRODUCT_SYSTEM_PROPERTIES += \
+    persist.vendor.btstack.enable.lpa=true \
+    persist.vendor.btstack.enable.twsplus=true
+    
 # Boot control
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.2-impl-qti:64 \
