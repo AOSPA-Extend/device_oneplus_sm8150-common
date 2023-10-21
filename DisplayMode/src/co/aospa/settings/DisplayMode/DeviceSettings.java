@@ -18,6 +18,7 @@
 package co.aospa.settings.DisplayMode;
 
 import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.database.ContentObserver;
@@ -66,10 +67,9 @@ public class DeviceSettings extends PreferenceFragment
                             HBMModeSwitch.EXTRA_HBM_STATE, false);
                     mHBMModeSwitch.setChecked(hbmStarted);
                     break;
+            }
         }
     };
-
-
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
